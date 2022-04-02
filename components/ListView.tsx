@@ -36,8 +36,9 @@ export default function ListView(): ReactElement {
   return (
     <>
       {
-        items.map((item) => {
+        items.map((item, i) => {
           return <ListItem
+            key={i}
             birthControl={item.birthControl}
             bcTime={item.bcTime}
             feelings={item.feelings}
